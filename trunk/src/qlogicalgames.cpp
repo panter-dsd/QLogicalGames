@@ -28,46 +28,23 @@
 
 QLogicalGames::QLogicalGames()
 {
-      createActions();
-      createMenus();
-      createToolBars();
-      createStatusBar();
-
-      readSettings();
+	createWidgets();
+	createActions();
+	createMenus();
+	createToolBars();
+	createStatusBar();
+	readSettings();
 }
-
+//
+void QLogicalGames::createWidgets()
+{
+	qmdiaMainArea=new QMdiArea(this);
+	this->setCentralWidget(qmdiaMainArea);
+}
+//
 void QLogicalGames::closeEvent(QCloseEvent *event)
 {
-      if (maybeSave()) {
-            writeSettings();
-            event->accept();
-      } else {
-            event->ignore();
-      }
-}
 
-void QLogicalGames::newFile()
-{
-}
-
-void QLogicalGames::open()
-{
-}
-
-bool QLogicalGames::save()
-{
-}
-
-bool QLogicalGames::saveAs()
-{
-}
-
-void QLogicalGames::about()
-{
-}
-
-void QLogicalGames::documentWasModified()
-{
 }
 
 void QLogicalGames::createActions()
@@ -94,21 +71,6 @@ void QLogicalGames::writeSettings()
 {
 }
 
-bool QLogicalGames::maybeSave()
-{
-}
-
-void QLogicalGames::loadFile(const QString &fileName)
-{
-}
-
-bool QLogicalGames::saveFile(const QString &fileName)
-{
-}
-
-void QLogicalGames::setCurrentFile(const QString &fileName)
-{
-}
 
 QLogicalGames::~QLogicalGames()
 {
