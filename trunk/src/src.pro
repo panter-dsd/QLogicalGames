@@ -1,3 +1,4 @@
+SUBDIRS += QNumbersDestroyer
 SOURCES += qlogicalgames.cpp \
            main.cpp
 HEADERS += qlogicalgames.h
