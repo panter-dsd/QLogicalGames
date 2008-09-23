@@ -24,16 +24,19 @@
 
 #include <QMainWindow>
 #include <QCloseEvent>
+#include "./QNumbersDestroyer/mainwidget.h"
 
 class QAction;
 class QMenu;
-class QMdiArea;
+class QSettings;
 
 class QLogicalGames:public QMainWindow
 {
 Q_OBJECT
 private:
-	QMdiArea*				qmdiaMainArea;
+	QNumbersDestroyer*				qndNumbersDestroyer;
+	
+	QSettings*									qsetAppSettings;
 public:
 	QLogicalGames();
 	~QLogicalGames();
