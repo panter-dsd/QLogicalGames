@@ -1,0 +1,15 @@
+<!DOCTYPE RCC><RCC version="1.0">
+<qresource>
+		<file>share/images/actionAboutQt.png</file>
+		<file>share/images/actionAbout.png</file>
+		<file>share/images/actionExit.png</file>
+		<file>share/images/actionNewGame.png</file>
+		<file>share/images/actionOpenGame.png</file>
+		<file>share/images/actionSaveGame.png</file>
+		<file>share/images/actionSaveAsGame.png</file>
+		<file>share/images/actionUndo.png</file>
+		<file>share/images/actionGetHelp.png</file>
+		<file>share/images/actionBeginAutoGame.png</file>
+		<file>share/images/actionStopAutoGame.png</file>
+</qresource>
+</RCC>
