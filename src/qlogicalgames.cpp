@@ -21,13 +21,9 @@
 #include <QtGui>
 #include "qlogicalgames.h"
 
-#include <QTextEdit>
-#include <QTextStream>
-#include <QCloseEvent>
-#include <QFileDialog>
-
 QLogicalGames::QLogicalGames()
 {
+	qsetAppSettings=new QSettings(QSettings::IniFormat,QSettings::UserScope,"PanteR","QLogicalGames");
 	createWidgets();
 	createActions();
 	createMenus();
@@ -38,8 +34,8 @@ QLogicalGames::QLogicalGames()
 //
 void QLogicalGames::createWidgets()
 {
-	qmdiaMainArea=new QMdiArea(this);
-	this->setCentralWidget(qmdiaMainArea);
+	qndNumbersDestroyer=new QNumbersDestroyer(this,qsetAppSettings);
+	this->setCentralWidget(qndNumbersDestroyer);
 }
 //
 void QLogicalGames::closeEvent(QCloseEvent *event)
